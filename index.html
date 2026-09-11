@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>〇〇高校 物理部 - Physics Club</title>
+  <title>物理部 - Physics Club</title>
   <style>
     * {
       box-sizing: border-box;
@@ -13,18 +13,16 @@
     }
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-      color: #2c3e50;
+      color: #1e293b;
       background-color: #f8fafc;
       line-height: 1.7;
     }
-
-    /* ヘッダーナビゲーション */
     header {
       position: sticky;
       top: 0;
       background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #e2e8f0;
       z-index: 100;
     }
     nav {
@@ -36,31 +34,29 @@
       padding: 16px 20px;
     }
     .logo {
-      font-weight: 800;
-      font-size: 1.1rem;
-      letter-spacing: 1px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      letter-spacing: 0.5px;
       color: #0f172a;
     }
     .nav-links {
       display: flex;
-      gap: 18px;
+      gap: 16px;
       list-style: none;
     }
     .nav-links a {
       text-decoration: none;
-      color: #64748b;
+      color: #475569;
       font-size: 0.9rem;
-      font-weight: 600;
+      font-weight: 500;
       transition: color 0.2s;
     }
     .nav-links a:hover {
-      color: #2563eb;
+      color: #0f172a;
     }
-
-    /* メインビジュアル */
     .hero {
-      height: 70vh;
-      background: linear-gradient(rgba(15, 23, 42, 0.7), rgba(15, 23, 42, 0.8)), url('https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      height: 65vh;
+      background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -69,14 +65,12 @@
       color: white;
       padding: 20px;
     }
-    .hero-badge {
-      background: rgba(37, 99, 235, 0.8);
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.85rem;
-      font-weight: bold;
-      margin-bottom: 15px;
-      letter-spacing: 1px;
+    .hero-tag {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #94a3b8;
+      margin-bottom: 12px;
     }
     .hero h1 {
       font-size: 2.2rem;
@@ -84,45 +78,40 @@
       letter-spacing: 1px;
     }
     .hero p {
-      font-size: 1.05rem;
-      max-width: 500px;
+      font-size: 1rem;
+      max-width: 520px;
       color: #cbd5e1;
     }
-
-    /* セクション共通設定 */
     .section {
       max-width: 960px;
       margin: 0 auto;
-      padding: 70px 20px;
+      padding: 60px 20px;
     }
     .section-title {
-      font-size: 1.7rem;
+      font-size: 1.5rem;
       text-align: center;
       color: #0f172a;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
     .section-sub {
       text-align: center;
       color: #64748b;
-      font-size: 0.95rem;
-      margin-bottom: 40px;
+      font-size: 0.85rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 35px;
     }
-
-    /* 部活紹介カード */
-    .about-card {
+    .about-box {
       background: white;
-      padding: 35px;
-      border-radius: 16px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+      padding: 30px;
+      border-radius: 8px;
       border: 1px solid #e2e8f0;
     }
-    .about-card h3 {
-      color: #2563eb;
+    .about-box h3 {
+      font-size: 1.1rem;
       margin-bottom: 12px;
-      font-size: 1.2rem;
+      color: #0f172a;
     }
-
-    /* 活動内容のグリッド */
     .grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -131,20 +120,11 @@
     .card {
       background: white;
       padding: 25px;
-      border-radius: 14px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+      border-radius: 8px;
       border: 1px solid #e2e8f0;
-      transition: transform 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-    }
-    .card-icon {
-      font-size: 2rem;
-      margin-bottom: 12px;
     }
     .card h4 {
-      font-size: 1.1rem;
+      font-size: 1rem;
       margin-bottom: 8px;
       color: #0f172a;
     }
@@ -152,8 +132,6 @@
       font-size: 0.9rem;
       color: #64748b;
     }
-
-    /* 写真ギャラリー */
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -161,9 +139,8 @@
     }
     .gallery-item {
       background: white;
-      border-radius: 12px;
+      border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.04);
       border: 1px solid #e2e8f0;
     }
     .gallery-item img {
@@ -173,151 +150,133 @@
       display: block;
     }
     .gallery-item .desc {
-      padding: 15px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: #334155;
+      padding: 12px 15px;
+      font-size: 0.85rem;
+      color: #475569;
     }
-
-    /* 新入部員募集エリア */
     .join-box {
-      background: linear-gradient(135deg, #1e293b, #0f172a);
+      background: #0f172a;
       color: white;
       padding: 40px 25px;
-      border-radius: 16px;
+      border-radius: 8px;
       text-align: center;
-      margin-top: 30px;
     }
     .join-box h3 {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       margin-bottom: 10px;
     }
     .join-box p {
       color: #94a3b8;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       margin-bottom: 20px;
     }
-    .join-box .tags {
+    .tags {
       display: flex;
       justify-content: center;
       gap: 10px;
       flex-wrap: wrap;
     }
-    .join-box .tag {
+    .tag {
       background: rgba(255,255,255,0.1);
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 0.85rem;
+      padding: 5px 12px;
+      border-radius: 4px;
+      font-size: 0.8rem;
     }
-
-    /* フッター */
     footer {
       background: #0f172a;
+      border-top: 1px solid #1e293b;
       color: #64748b;
       text-align: center;
-      padding: 30px 20px;
-      font-size: 0.85rem;
+      padding: 25px 20px;
+      font-size: 0.8rem;
     }
   </style>
 </head>
 <body>
 
-  <!-- ナビゲーション -->
   <header>
     <nav>
-      <div class="logo">⚡️ 物理部 / Physics Club</div>
+      <div class="logo">物理部 / Physics Club</div>
       <ul class="nav-links">
-        <li><a href="#about">紹介</a></li>
+        <li><a href="#about">概要</a></li>
         <li><a href="#activity">活動</a></li>
-        <li><a href="#gallery">部室の日常</a></li>
-        <li><a href="#join">入部について</a></li>
+        <li><a href="#gallery">部室</a></li>
+        <li><a href="exam.html">入部試験</a></li>
+        <li><a href="secret.html">部員専用</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- トップのメインビジュアル -->
   <div class="hero">
-    <div class="hero-badge">PHYSICS & CHILL</div>
-    <h1>部活という名の、最高の溜まり場。</h1>
-    <p>実験もする、雑談もする。放課後の自由研究とくつろぎの空間へようこそ。</p>
+    <div class="hero-tag">High School Physics Club</div>
+    <h1>研究と、放課後の自由空間。</h1>
+    <p>実験からプログラミング、雑談まで。自由度の高い部活動です。</p>
   </div>
 
-  <!-- 部活紹介 -->
   <section class="section" id="about">
     <h2 class="section-title">物理部について</h2>
-    <p class="section-sub">About Our Club</p>
-    <div class="about-card">
-      <h3>「物理」と名乗りつつ、基本は自由な空間です</h3>
+    <p class="section-sub">About</p>
+    <div class="about-box">
+      <h3>自由研究と居場所を兼ねた空間</h3>
       <p>
-        私たちの物理部は、真面目に実験やプログラミングを追求する日もあれば、部室に集まって放課後をダラダラ語り合って過ごす日もある、自由度の高い部活です。<br>
-        「ちょっと面白いものを作ってみたい」「放課後ゆっくりできる居場所がほしい」そんな人が集まっています。
+        物理部は、個人の興味に応じた実験や工作、情報技術の探求を行うとともに、放課後の交流の場としても機能しています。各自が思い思いのテーマを持ち寄り、マイペースに活動しています。
       </p>
     </div>
   </section>
 
-  <!-- 活動内容（実態） -->
   <section class="section" id="activity" style="background-color: #f1f5f9;">
-    <h2 class="section-title">主な活動（実態）</h2>
-    <p class="section-sub">What We Actually Do</p>
+    <h2 class="section-title">主な活動内容</h2>
+    <p class="section-sub">Activities</p>
     <div class="grid">
       <div class="card">
-        <div class="card-icon">🧪</div>
-        <h4>実験・工作</h4>
-        <p>ピタゴラ装置や電子工作、気になった物理現象の検証など、思いつきで実験します。</p>
+        <h4>実験・科学工作</h4>
+        <p>各種物理現象の検証や、装置の試作などを興味ベースで行います。</p>
       </div>
       <div class="card">
-        <div class="card-icon">💻</div>
-        <h4>プログラミング・PC</h4>
-        <p>ゲーム作りやWebサイト制作、マイコン（Arduino/Raspberry Pi）などを触ったりします。</p>
+        <h4>電子工作・プログラミング</h4>
+        <p>マイコン制御やソフトウェア開発、Web制作などを扱います。</p>
       </div>
       <div class="card">
-        <div class="card-icon">🛋️</div>
-        <h4>放課後のチル・雑談</h4>
-        <p>宿題をやったり、好きなゲームやアニメの話で盛り上がったりする最高の溜まり場タイム。</p>
+        <h4>自習・情報交換</h4>
+        <p>放課後の作業や課題、雑談などを行うフリースペースとしての利用です。</p>
       </div>
     </div>
   </section>
 
-  <!-- 部室ギャラリー（写真） -->
   <section class="section" id="gallery">
-    <h2 class="section-title">部室の日常ギャラリー</h2>
-    <p class="section-sub">Clubroom Snapshots</p>
+    <h2 class="section-title">部室の様子</h2>
+    <p class="section-sub">Clubroom</p>
     <div class="gallery-grid">
-      <!-- 写真1 -->
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="実験の様子">
-        <div class="desc">たまに本気を出す実験風景</div>
+        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="実験風景">
+        <div class="desc">実験・検証作業の風景</div>
       </div>
-      <!-- 写真2 -->
       <div class="gallery-item">
         <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="電子パーツ">
-        <div class="desc">部室に転がっている謎のパーツたち</div>
+        <div class="desc">電子部品・機材</div>
       </div>
-      <!-- 写真3 -->
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="部室の机">
-        <div class="desc">だいたい誰かがくつろいでいる部室</div>
+        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="作業スペース">
+        <div class="desc">作業机・ミーティングスペース</div>
       </div>
     </div>
   </section>
 
-  <!-- 入部・部員募集 -->
-  <section class="section" id="join">
+  <section class="section">
     <div class="join-box">
-      <h3>部員・居候、年中募集中！</h3>
-      <p>理系・文系問いません。兼部も途中退出も完全自由。いつでも理科室/部室に遊びに来てください！</p>
+      <h3>部員募集について</h3>
+      <p>文系・理系問わず、通年で受け付けています。兼部や途中入退室も自由です。</p>
       <div class="tags">
-        <span class="tag">✅ 兼部OK</span>
-        <span class="tag">✅ 週1〜毎日でも自由</span>
-        <span class="tag">✅ 途中退室OK</span>
-        <span class="tag">✅ 初心者大歓迎</span>
+        <span class="tag">兼部可能</span>
+        <span class="tag">活動頻度自由</span>
+        <span class="tag">途中退出可</span>
+        <span class="tag">初心者歓迎</span>
       </div>
     </div>
   </section>
 
-  <!-- フッター -->
   <footer>
-    <p>© 物理部 (Physics Club). All Rights Reserved.</p>
+    <p>&copy; 物理部 All Rights Reserved.</p>
   </footer>
 
 </body>
