@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>2023年度 前期 入部学力検査問題（数学 / 一般）</title>
+  
+  <!-- 数式（TeX）表示設定 -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 15mm 15mm;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Hiragino Mincho ProN", "Yu Mincho", "MS Mincho", serif;
+      color: #000;
+      background: #fff;
+      line-height: 1.5;
+      font-size: 9.5pt;
+    }
+    .page {
+      width: 100%;
+      min-height: 260mm;
+      padding: 5mm 5mm;
+      page-break-after: always;
+      position: relative;
+    }
+
+    /* 表紙 */
+    .cover {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 255mm;
+    }
+    .cover-top {
+      margin-top: 15mm;
+    }
+    .cover-badge {
+      display: inline-block;
+      border: 1px solid #000;
+      padding: 3px 12px;
+      font-size: 11pt;
+      margin-bottom: 12px;
+      letter-spacing: 2px;
+    }
+    .cover-year {
+      font-size: 14pt;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+    }
+    .cover-category {
+      font-size: 12pt;
+      letter-spacing: 3px;
+    }
+    .cover-title {
+      font-size: 32pt;
+      font-weight: bold;
+      letter-spacing: 16px;
+      margin: 25mm 0 15mm 0;
+    }
+    .cover-time {
+      font-size: 12pt;
+      letter-spacing: 2px;
+    }
+    .cover-notes {
+      border: 2px solid #000;
+      padding: 12px 18px;
+      text-align: left;
+      font-size: 8.5pt;
+      line-height: 1.7;
+      margin: 10mm auto;
+      max-width: 155mm;
+    }
+    .cover-notes h3 {
+      text-align: center;
+      font-size: 10pt;
+      margin-bottom: 6px;
+    }
+    .number-box {
+      border: 1px solid #000;
+      display: inline-block;
+      padding: 6px 25px;
+      font-size: 10pt;
+      margin-top: 5mm;
+    }
+
+    /* ヘッダー */
+    .exam-header {
+      border-bottom: 1px solid #000;
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 3px;
+      margin-bottom: 10px;
+      font-size: 8pt;
+    }
+
+    /* 問題 */
+    .q-item {
+      margin-bottom: 11px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed #ccc;
+    }
+    .q-title {
+      font-weight: bold;
+      font-size: 9.5pt;
+      margin-bottom: 4px;
+    }
+    .q-text {
+      text-indent: 1em;
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    /* 解答用紙 */
+    .sheet-title {
+      text-align: center;
+      font-size: 13pt;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .ans-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    .ans-table th, .ans-table td {
+      border: 1.5px solid #000;
+      padding: 10px;
+      text-align: center;
+    }
+    .ans-table th {
+      width: 25%;
+      font-size: 9.5pt;
+      background: #f9f9f9;
+    }
+    .ans-table td {
+      width: 75%;
+      height: 22mm;
+      text-align: left;
+      vertical-align: middle;
+      padding-left: 20px;
+    }
+    .ans-note {
+      font-size: 8.5pt;
+      margin-top: 15px;
+      color: #333;
+    }
+
+    /* 背表紙 */
+    .backcover {
+      text-align: center;
+      height: 255mm;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .backcover-title {
+      font-size: 14pt;
+      letter-spacing: 8px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 1ページ目：表紙 -->
+  <div class="page cover">
+    <div class="cover-top">
+      <div class="cover-badge">前　期</div>
+      <div class="cover-year">2023年度 入部学力検査問題</div>
+      <div class="cover-category">（ 一　般 ）</div>
+      <div class="cover-title">数　学</div>
+      <div class="cover-time">試験時間　30分</div>
+    </div>
+
+    <div class="cover-notes">
+      <h3>注　意　事　項</h3>
+      1. 試験開始の合図があるまで、この問題冊子を開いてはならない。<br>
+      2. 本冊子の総ページ数は 4 ページ（表紙・背表紙を含む）である。<br>
+      3. 解答はすべて別紙の解答用紙に記入すること（答えのみ記入）。<br>
+      4. 試験時間は 30 分とする。<br>
+      5. 計算用紙が足りない場合は部室の裏紙を使用してよい。<br>
+      6. 得点が 0 点であっても入部は無条件で許可される。
+    </div>
+
+    <div>
+      <div class="number-box">受験番号：　　　　　　　　　　氏名：</div>
+    </div>
+  </div>
+
+  <!-- 2ページ目：問題本文 -->
+  <div class="page">
+    <div class="exam-header">
+      <span>2023年度 前期 数学（一般）</span>
+      <span>2 / 4</span>
+    </div>
+
+    <div class="q-item">
+      <div class="q-title">第 1 問（配点 30点）</div>
+      <p class="q-text">
+        $0$ 以上 $1$ 以下の実数から無作為に $1$ つの数を選ぶとき、その数が有理数（分数で表せる数）である確率を求めよ。
+      </p>
+    </div>
+
+    <div class="q-item">
+      <div class="q-title">第 2 問（配点 30点）</div>
+      <p class="q-text">
+        方程式 $x^x = x$ を満たす実数 $x$ をすべて求めよ。
+      </p>
+    </div>
+
+    <div class="q-item">
+      <div class="q-title">第 3 問（配点 35点）</div>
+      <p class="q-text">
+        $7^{7^{7^7}}$ を $10$ で割った余り（一の位の数字）を求めよ。
+      </p>
+    </div>
+
+    <div class="q-item">
+      <div class="q-title">第 4 問（配点 40点）</div>
+      <p class="q-text">
+        分数 $\frac{1}{998001}$ を小数で表したとき、小数第 $2026$ 位の数字を求めよ。
+      </p>
+    </div>
+
+    <div class="q-item">
+      <div class="q-title">第 5 問（配点 30点）</div>
+      <p class="q-text">
+        ある人が公正なコインを $2$ 回投げた。「少なくとも $1$ 回は表が出た」とだけ知らされたとき、$2$ 回とも表である確率を求めよ。
+      </p>
+    </div>
+
+    <div class="q-item" style="border-bottom: none;">
+      <div class="q-title">第 6 問（配点 35点）</div>
+      <p class="q-text">
+        $\sqrt{1 + \sqrt{1 + \sqrt{1 + \sqrt{1 + \cdots}}}}$ （根号の操作を無限に繰り返した数）の値を求めよ。
+      </p>
+    </div>
+  </div>
+
+  <!-- 3ページ目：解答用紙（答えのみ記入形式） -->
+  <div class="page">
+    <div class="exam-header">
+      <span>2023年度 前期 数学 解答用紙</span>
+      <span>3 / 4</span>
+    </div>
+
+    <div class="sheet-title">入部学力検査 解答用紙（数学）</div>
+    <div style="text-align: right; margin-bottom: 8px; font-size: 8.5pt;">
+      受験番号：＿＿＿＿＿＿＿＿　氏名：＿＿＿＿＿＿＿＿＿＿＿＿　得点：　　　　 / 200
+    </div>
+
+    <table class="ans-table">
+      <tr>
+        <th>第 1 問 解答欄<br><span style="font-size: 7.5pt; font-weight: normal;">(30点)</span></th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>第 2 問 解答欄<br><span style="font-size: 7.5pt; font-weight: normal;">(30点)</span></th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>第 3 問 解答欄<br><span style="font-size: 7.5pt; font-weight: normal;">(35点)</span></th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>第 4 問 解答欄<br><span style="font-size: 7.5pt; font-weight: normal;">(40点)</span></th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>第 5 問 解答欄<br><span style="font-size: 7.5pt; font-weight: normal;">(30点)</span></th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>第 6 問 解答欄<br><span style="font-size: 7.5pt; font-weight: normal;">(35点)</span></th>
+        <td></td>
+      </tr>
+    </table>
+
+    <div class="ans-note">
+      ※ 途中経過は記入せず、最終的な答えのみを各解答欄に明瞭に記入すること。
+    </div>
+  </div>
+
+  <!-- 4ページ目：背表紙 -->
+  <div class="page backcover">
+    <div class="backcover-title">（ 計 算 用 紙 ）</div>
+    <p style="color: #888; font-size: 8pt; margin-top: 15px;">※ 計算および思考の過程に自由に使用してよい。</p>
+  </div>
+
+</body>
+</html>
