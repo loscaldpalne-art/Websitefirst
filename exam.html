@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>入部試験 過去問題集 - 物理部</title>
+  <title>入部試験 過去問題 - 物理部</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -36,33 +36,48 @@
       color: #64748b;
       margin-top: 5px;
     }
-    .exam-card {
+    .exam-item {
       background: white;
       border: 1px solid #e2e8f0;
       border-radius: 8px;
       padding: 20px;
       margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 15px;
     }
-    .year-tag {
-      font-size: 0.75rem;
-      color: #475569;
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 8px;
-      display: block;
-    }
-    .question {
-      font-weight: 600;
-      margin-bottom: 10px;
+    .exam-info h3 {
+      font-size: 1.05rem;
       color: #0f172a;
+      margin-bottom: 4px;
     }
-    .note {
+    .exam-info p {
       font-size: 0.85rem;
       color: #64748b;
-      margin-top: 10px;
-      border-top: 1px solid #f1f5f9;
-      padding-top: 8px;
+    }
+    .pdf-button {
+      display: inline-block;
+      padding: 8px 18px;
+      background: #0f172a;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: background-color 0.2s;
+    }
+    .pdf-button:hover {
+      background: #334155;
+    }
+    .notice {
+      background: #f1f5f9;
+      border-left: 3px solid #64748b;
+      padding: 12px 16px;
+      font-size: 0.85rem;
+      color: #475569;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -72,31 +87,39 @@
 
   <div class="header">
     <h1>入部試験 過去問題アーカイブ</h1>
-    <p>物理部における過去の出題事例（非公式）</p>
+    <p>過去3年分の入部試験問題（PDF形式）を閲覧・ダウンロードできます。</p>
   </div>
 
-  <div class="exam-card">
-    <span class="year-tag">[2025年度 第1問・力学]</span>
-    <div class="question">
-      問1. 部室のソファの摩擦係数を 0 と仮定したとき、放課後に着席した部員がそのまま帰宅できなくなる確率を求めよ。
+  <!-- 2025年度 -->
+  <div class="exam-item">
+    <div class="exam-info">
+      <h3>2025年度 物理部入部試験（一般）</h3>
+      <p>形式: PDF / 出題分野: 力学・心理・部室運用</p>
     </div>
-    <div class="note">模範解答：100%（居心地が良いため）</div>
+    <!-- ※現在はダミーのサンプルPDFが開きます -->
+    <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" class="pdf-button">PDFを開く</a>
   </div>
 
-  <div class="exam-card">
-    <span class="year-tag">[2024年度 第2問・熱力学]</span>
-    <div class="question">
-      問2. 夏期の部室において、エアコンのリモコンが見当たらない際のエントロピー増大過程を説明せよ。
+  <!-- 2024年度 -->
+  <div class="exam-item">
+    <div class="exam-info">
+      <h3>2024年度 物理部入部試験（一般）</h3>
+      <p>形式: PDF / 出題分野: 熱力学・環境・生活態度</p>
     </div>
-    <div class="note">模範解答：部員全員が捜索を諦めて団扇を使い始める状態に収束する。</div>
+    <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" class="pdf-button">PDFを開く</a>
   </div>
 
-  <div class="exam-card">
-    <span class="year-tag">[2023年度 第3問・量子論]</span>
-    <div class="question">
-      問3. 部室の冷蔵庫内にある所属不明の菓子の状態について論ぜよ。
+  <!-- 2023年度 -->
+  <div class="exam-item">
+    <div class="exam-info">
+      <h3>2023年度 物理部入部試験（一般）</h3>
+      <p>形式: PDF / 出題分野: 量子論・哲学・食糧問題</p>
     </div>
-    <div class="note">模範解答：観測者が部室に一人になった時点で消費状態へと収縮する。</div>
+    <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" class="pdf-button">PDFを開く</a>
+  </div>
+
+  <div class="notice">
+    注意: 試験結果は入部の可否に一切影響しません。入部は随時受け付けています。
   </div>
 
 </body>
