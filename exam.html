@@ -43,8 +43,6 @@
       border-left: 3px solid #0f172a;
       padding-left: 10px;
     }
-
-    /* 問題カード */
     .exam-item {
       background: white;
       border: 1px solid #e2e8f0;
@@ -76,8 +74,6 @@
       font-size: 0.85rem;
       font-weight: 500;
     }
-
-    /* 統計テーブル */
     .table-container {
       background: white;
       border: 1px solid #e2e8f0;
@@ -110,7 +106,6 @@
       color: #64748b;
       margin-top: 8px;
     }
-
     .notice {
       background: #f1f5f9;
       border-left: 3px solid #64748b;
@@ -127,27 +122,45 @@
 
   <div class="header">
     <h1>入部試験 アーカイブ・実施統計</h1>
-    <p>過去問題冊子（PDF）および直近の試験実施結果データです。</p>
+    <p>過去4年分の問題冊子（PDF）および試験実施結果データです。</p>
   </div>
 
-  <h2 class="section-title">過去問題冊子（PDF）</h2>
+  <h2 class="section-title">過去問題冊子（PDF印刷用）</h2>
 
-  <!-- 2024年度：math2024.pdf を直接開く -->
+  <!-- 2026年度 -->
+  <div class="exam-item">
+    <div class="exam-info">
+      <h3>2026年度 前期 入部学力検査（数学）</h3>
+      <p>形式: A4冊子 (4ページ) / 制限時間: 30分 / 配点: 200点満点 (全6問 / 答えのみ)</p>
+    </div>
+    <a href="exam_2026_print.html" target="_blank" class="pdf-button">冊子を開く (PDF保存)</a>
+  </div>
+
+  <!-- 2025年度 -->
+  <div class="exam-item">
+    <div class="exam-info">
+      <h3>2025年度 前期 入部学力検査（数学）</h3>
+      <p>形式: A4冊子 (4ページ) / 制限時間: 30分 / 配点: 200点満点 (全6問 / 答えのみ)</p>
+    </div>
+    <a href="exam_2025_print.html" target="_blank" class="pdf-button">冊子を開く (PDF保存)</a>
+  </div>
+
+  <!-- 2024年度 -->
   <div class="exam-item">
     <div class="exam-info">
       <h3>2024年度 前期 入部学力検査（数学）</h3>
-      <p>形式: PDF冊子 (4ページ) / 制限時間: 30分 / 配点: 200点満点 (全6問)</p>
+      <p>形式: A4冊子 (4ページ) / 制限時間: 30分 / 配点: 200点満点 (全6問 / 答えのみ)</p>
     </div>
-    <a href="math2024.pdf" target="_blank" class="pdf-button">PDFを開く</a>
+    <a href="exam_2024_print.html" target="_blank" class="pdf-button">冊子を開く (PDF保存)</a>
   </div>
 
-  <!-- 2023年度：math2023.pdf を直接開く -->
+  <!-- 2023年度 -->
   <div class="exam-item">
     <div class="exam-info">
       <h3>2023年度 前期 入部学力検査（数学）</h3>
-      <p>形式: PDF冊子 (4ページ) / 制限時間: 30分 / 配点: 200点満点 (全6問)</p>
+      <p>形式: A4冊子 (4ページ) / 制限時間: 30分 / 配点: 200点満点 (全6問 / 答えのみ)</p>
     </div>
-    <a href="math2023.pdf" target="_blank" class="pdf-button">PDFを開く</a>
+    <a href="exam_2023_print.html" target="_blank" class="pdf-button">冊子を開く (PDF保存)</a>
   </div>
 
   <h2 class="section-title">入部試験 実施結果</h2>
@@ -163,6 +176,20 @@
         </tr>
       </thead>
       <tbody>
+        <tr>
+          <td>2026年度 前期</td>
+          <td>45 名</td>
+          <td>45 名</td>
+          <td class="highlight">45 名</td>
+          <td>1.00 倍</td>
+        </tr>
+        <tr>
+          <td>2025年度 前期</td>
+          <td>40 名</td>
+          <td>40 名</td>
+          <td class="highlight">40 名</td>
+          <td>1.00 倍</td>
+        </tr>
         <tr>
           <td>2024年度 前期</td>
           <td>42 名</td>
@@ -195,9 +222,23 @@
       </thead>
       <tbody>
         <tr>
+          <td>2026年度 前期</td>
+          <td>200 点</td>
+          <td class="highlight">192 点 (※)</td>
+          <td class="highlight">0 点</td>
+          <td>4.8 点</td>
+        </tr>
+        <tr>
+          <td>2025年度 前期</td>
+          <td>200 点</td>
+          <td class="highlight">190 点</td>
+          <td class="highlight">0 点</td>
+          <td>5.5 点</td>
+        </tr>
+        <tr>
           <td>2024年度 前期</td>
           <td>200 点</td>
-          <td class="highlight">198 点 (※)</td>
+          <td class="highlight">198 点</td>
           <td class="highlight">0 点</td>
           <td>6.8 点</td>
         </tr>
@@ -212,8 +253,7 @@
     </table>
   </div>
   <div class="note">
-    ※ 合格者最高点（198点）は、部室に迷い込んだオイラーによる答案と推定されています。<br>
-    ※ 合格最低点は各年度とも 0 点のため、答案の提出または部室への着席をもって合格となります。
+    ※ 各年度とも合格最低点は 0 点のため、答案の提出または部室への着席をもって合格となります。
   </div>
 
   <div class="notice">
