@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>入部試験 過去問題 - 物理部</title>
+  <title>入部試験 過去問題・実施結果 - 物理部</title>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -36,12 +36,21 @@
       color: #64748b;
       margin-top: 5px;
     }
+    .section-title {
+      font-size: 1.15rem;
+      color: #0f172a;
+      margin: 30px 0 15px 0;
+      border-left: 3px solid #0f172a;
+      padding-left: 10px;
+    }
+
+    /* 問題カード */
     .exam-item {
       background: white;
       border: 1px solid #e2e8f0;
       border-radius: 8px;
       padding: 20px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -66,11 +75,42 @@
       border-radius: 6px;
       font-size: 0.85rem;
       font-weight: 500;
-      transition: background-color 0.2s;
     }
-    .pdf-button:hover {
-      background: #334155;
+
+    /* 統計テーブル */
+    .table-container {
+      background: white;
+      border: 1px solid #e2e8f0;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 20px;
     }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    th, td {
+      padding: 12px 10px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+    th {
+      background: #f1f5f9;
+      color: #475569;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+    td.highlight {
+      font-weight: bold;
+      color: #0f172a;
+    }
+    .note {
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-top: 8px;
+    }
+
     .notice {
       background: #f1f5f9;
       border-left: 3px solid #64748b;
@@ -86,40 +126,98 @@
   <a href="index.html" class="back-link">&larr; トップページに戻る</a>
 
   <div class="header">
-    <h1>入部試験 過去問題アーカイブ</h1>
-    <p>過去3年分の入部試験問題（PDF形式）を閲覧・ダウンロードできます。</p>
+    <h1>入部試験 アーカイブ・実施統計</h1>
+    <p>過去問題冊子（PDF）および直近の試験実施結果データです。</p>
   </div>
 
-  <!-- 2025年度 -->
+  <h2 class="section-title">過去問題冊子（PDF）</h2>
+
+  <!-- 2024年度：math2024.pdf を直接開く -->
   <div class="exam-item">
     <div class="exam-info">
-      <h3>2025年度 物理部入部試験（一般）</h3>
-      <p>形式: PDF / 出題分野: 力学・心理・部室運用</p>
+      <h3>2024年度 前期 入部学力検査（数学）</h3>
+      <p>形式: PDF冊子 (4ページ) / 制限時間: 30分 / 配点: 200点満点 (全6問)</p>
     </div>
-    <!-- ※現在はダミーのサンプルPDFが開きます -->
-    <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" class="pdf-button">PDFを開く</a>
+    <a href="math2024.pdf" target="_blank" class="pdf-button">PDFを開く</a>
   </div>
 
-  <!-- 2024年度 -->
+  <!-- 2023年度：math2023.pdf を直接開く -->
   <div class="exam-item">
     <div class="exam-info">
-      <h3>2024年度 物理部入部試験（一般）</h3>
-      <p>形式: PDF / 出題分野: 熱力学・環境・生活態度</p>
+      <h3>2023年度 前期 入部学力検査（数学）</h3>
+      <p>形式: PDF冊子 (4ページ) / 制限時間: 30分 / 配点: 200点満点 (全6問)</p>
     </div>
-    <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" class="pdf-button">PDFを開く</a>
+    <a href="math2023.pdf" target="_blank" class="pdf-button">PDFを開く</a>
   </div>
 
-  <!-- 2023年度 -->
-  <div class="exam-item">
-    <div class="exam-info">
-      <h3>2023年度 物理部入部試験（一般）</h3>
-      <p>形式: PDF / 出題分野: 量子論・哲学・食糧問題</p>
-    </div>
-    <a href="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf" target="_blank" class="pdf-button">PDFを開く</a>
+  <h2 class="section-title">入部試験 実施結果</h2>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>実施年度</th>
+          <th>志願者数</th>
+          <th>受験者数</th>
+          <th>合格者数</th>
+          <th>実質倍率</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2024年度 前期</td>
+          <td>42 名</td>
+          <td>42 名</td>
+          <td class="highlight">42 名</td>
+          <td>1.00 倍</td>
+        </tr>
+        <tr>
+          <td>2023年度 前期</td>
+          <td>38 名</td>
+          <td>38 名</td>
+          <td class="highlight">38 名</td>
+          <td>1.00 倍</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h2 class="section-title">得点状況（200点満点）</h2>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>実施年度</th>
+          <th>満点</th>
+          <th>合格者最高点</th>
+          <th>合格者最低点</th>
+          <th>受験者平均点</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>2024年度 前期</td>
+          <td>200 点</td>
+          <td class="highlight">198 点 (※)</td>
+          <td class="highlight">0 点</td>
+          <td>6.8 点</td>
+        </tr>
+        <tr>
+          <td>2023年度 前期</td>
+          <td>200 点</td>
+          <td class="highlight">195 点</td>
+          <td class="highlight">0 点</td>
+          <td>5.2 点</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    ※ 合格者最高点（198点）は、部室に迷い込んだオイラーによる答案と推定されています。<br>
+    ※ 合格最低点は各年度とも 0 点のため、答案の提出または部室への着席をもって合格となります。
   </div>
 
   <div class="notice">
-    注意: 試験結果は入部の可否に一切影響しません。入部は随時受け付けています。
+    注意: 試験の成績は部内での序列や扱い等に一切関係ありません。誰でも歓迎します。
   </div>
 
 </body>
