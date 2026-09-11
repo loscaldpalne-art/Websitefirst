@@ -54,9 +54,11 @@
     .nav-links a:hover {
       color: #0f172a;
     }
+
+    /* メインビジュアルの背景画像（hero.jpg を指定） */
     .hero {
       height: 65vh;
-      background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+      background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('hero.jpg') center/cover no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -208,6 +210,7 @@
     </nav>
   </header>
 
+  <!-- メイン写真（hero.jpg） -->
   <div class="hero">
     <div class="hero-tag">High School Physics Club</div>
     <h1>研究と、放課後の自由空間。</h1>
@@ -244,20 +247,21 @@
     </div>
   </section>
 
+  <!-- 写真ギャラリー（photo1.jpg, photo2.jpg, photo3.jpg） -->
   <section class="section" id="gallery">
     <h2 class="section-title">部室の様子</h2>
     <p class="section-sub">Clubroom</p>
     <div class="gallery-grid">
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="実験風景">
+        <img src="photo1.jpg" alt="部室写真1">
         <div class="desc">実験・検証作業の風景</div>
       </div>
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="電子パーツ">
+        <img src="photo2.jpg" alt="部室写真2">
         <div class="desc">電子部品・機材</div>
       </div>
       <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="作業スペース">
+        <img src="photo3.jpg" alt="部室写真3">
         <div class="desc">作業机・ミーティングスペース</div>
       </div>
     </div>
