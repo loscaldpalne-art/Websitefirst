@@ -55,10 +55,10 @@
       color: #0f172a;
     }
 
-    /* メインビジュアルの背景画像（hero.jpg を指定） */
+    /* メインビジュアル */
     .hero {
       height: 65vh;
-      background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('IMG_0418.jpeg') center/cover no-repeat;
+      background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('hero.jpg') center/cover no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -184,6 +184,77 @@
       border-radius: 4px;
       font-size: 0.8rem;
     }
+
+    /* ポップアップバナー */
+    .popup-banner {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      max-width: 320px;
+      width: calc(100% - 40px);
+      background: #0f172a;
+      color: white;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 18px 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      z-index: 1000;
+      transform: translateY(150%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .popup-banner.show {
+      transform: translateY(0);
+    }
+    .popup-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      background: none;
+      border: none;
+      color: #94a3b8;
+      font-size: 1.2rem;
+      cursor: pointer;
+      line-height: 1;
+    }
+    .popup-close:hover {
+      color: white;
+    }
+    .popup-tag {
+      font-size: 0.7rem;
+      letter-spacing: 1px;
+      color: #38bdf8;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 4px;
+    }
+    .popup-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #f8fafc;
+    }
+    .popup-text {
+      font-size: 0.8rem;
+      color: #94a3b8;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .popup-btn {
+      display: block;
+      background: #2563eb;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+    .popup-btn:hover {
+      background: #1d4ed8;
+    }
+
     footer {
       background: #0f172a;
       border-top: 1px solid #1e293b;
@@ -247,21 +318,20 @@
     </div>
   </section>
 
-  <!-- 写真ギャラリー（photo1.jpg, photo2.jpg, photo3.jpg） -->
   <section class="section" id="gallery">
     <h2 class="section-title">部室の様子</h2>
     <p class="section-sub">Clubroom</p>
     <div class="gallery-grid">
       <div class="gallery-item">
-        <img src="IMG_0417.jpeg" alt="部室写真1">
+        <img src="photo1.jpg" alt="部室写真1">
         <div class="desc">実験・検証作業の風景</div>
       </div>
       <div class="gallery-item">
-        <img src="IMG_0420.jpeg" alt="部室写真2">
+        <img src="photo2.jpg" alt="部室写真2">
         <div class="desc">電子部品・機材</div>
       </div>
       <div class="gallery-item">
-        <img src="IMG_0419.jpeg" alt="部室写真3">
+        <img src="photo3.jpg" alt="部室写真3">
         <div class="desc">作業机・ミーティングスペース</div>
       </div>
     </div>
@@ -280,9 +350,32 @@
     </div>
   </section>
 
+  <!-- ポップアップバナー -->
+  <div id="joinPopup" class="popup-banner">
+    <button class="popup-close" onclick="closePopup()">&times;</button>
+    <div class="popup-tag">ADMISSION</div>
+    <div class="popup-title">物理部に入りたい？</div>
+    <div class="popup-text">まずは過去問を解いてみよう。（※0点でも入部は許可されます）</div>
+    <a href="exam.html" class="popup-btn">過去問を見る</a>
+  </div>
+
   <footer>
     <p>&copy; 物理部 All Rights Reserved.</p>
   </footer>
+
+  <script>
+    // ページを開いて1秒後にポップアップを表示
+    window.addEventListener('DOMContentLoaded', () => {
+      setTimeout(() => {
+        document.getElementById('joinPopup').classList.add('show');
+      }, 1000);
+    });
+
+    // 閉じるボタンの処理
+    function closePopup() {
+      document.getElementById('joinPopup').classList.remove('show');
+    }
+  </script>
 
 </body>
 </html>
